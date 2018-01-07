@@ -9,7 +9,7 @@ package edu.wpi.first.wpilibj.templates;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.PWM;
+import edu.wpi.first.wpilibj.RobotDrive;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -19,24 +19,23 @@ import edu.wpi.first.wpilibj.PWM;
  * directory.
  */
 public class RobotTemplate extends IterativeRobot {
-    // for motor controllers
-    PWM left_spark = null, 
-            right_spark = null;
+    final int LEFT_MOTOR_PORT  = 0;
+    final int RIGHT_MOTOR_PORT = 1;
     
-    // for getting operator input
+    // simple control scheme
+    RobotDrive robot_drive = null;
     Joystick joystick = null;
-    
-    // value is tracked across multiple iterations
-    int current_pwm = 1;
     
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
-        left_spark  = new PWM(0);
-        right_spark = new PWM(1);
-        joystick    = new Joystick(1);
+        // RobotDrive intialization
+        robot_drive = new RobotDrive(
+                LEFT_MOTOR_PORT, RIGHT_MOTOR_PORT);
+
+        joystick = new Joystick(1);
     }
 
     /**
@@ -50,9 +49,7 @@ public class RobotTemplate extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        current_pwm++;
-        current_pwm = current_pwm % 256;
-        left_spark.setRaw(current_pwm);
+        robot_drive.arcadeDrive(joystick);
     }
     
     /**
