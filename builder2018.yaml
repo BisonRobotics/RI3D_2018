@@ -47,11 +47,11 @@ Properties:
     validators: null
     value: []
   Java Package: !!robotbuilder.data.properties.StringProperty {default: org.usfirst.frc0000,
-    name: Java Package, validators: null, value: org.usfirst.frc0000}
+    name: Java Package, validators: null, value: org.usfirst.frc4607}
   Use Default Java Package: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Use Default Java Package, validators: null, value: true}
   Team Number: !!robotbuilder.data.properties.IntegerProperty {default: 0, name: Team Number,
-    validators: null, value: 0}
+    validators: null, value: 4607}
   Export Subsystems: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,

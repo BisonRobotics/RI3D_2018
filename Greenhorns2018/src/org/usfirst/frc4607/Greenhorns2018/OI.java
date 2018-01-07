@@ -9,9 +9,9 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc0.Greenhorns2018;
+package org.usfirst.frc4607.Greenhorns2018;
 
-import org.usfirst.frc0.Greenhorns2018.commands.*;
+import org.usfirst.frc4607.Greenhorns2018.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
