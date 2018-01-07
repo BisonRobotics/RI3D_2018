@@ -1,0 +1,10 @@
+Motors:
+
+4x drive motor (2 on each side)
+	- each set of two need to run at same speed
+
+2x servo for opening cog collector doors
+1x for pushing cog out
+
+1x intake motor (for picking up balls)
+1x motor for flywheel shooter
