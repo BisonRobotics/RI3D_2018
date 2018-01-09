@@ -31,13 +31,20 @@ public class IntakeIn extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	RobotMap.intakeIntake.set(.6);
+    	if (RobotMap.intakeIntake.get() == 0) {
+        	RobotMap.intakeIntake.set(.6);
+        	RobotMap.intakeIntake2.set(.6);
+    	}
+    	else {
+    		RobotMap.intakeIntake.set(0);
+    		RobotMap.intakeIntake2.set(0);
+    	}    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
